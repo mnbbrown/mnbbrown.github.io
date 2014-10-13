@@ -1,19 +1,8 @@
 ---
 layout: page
-title: About Pixyll
+title: About Me
 permalink: /about/
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
-
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
-
-Thanks to the following:
-
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Solarized](http://ethanschoonover.com/solarized)
+Hi, I'm Matthew. I study business at [QUT](http://www.qut.edu.au) in Brisbane, Australia and work for [Innovare Group](http://www.innovaregroup.com.au/).
+Say hello on [LinkedIn](http://au.linkedin.com/in/mnbbrown/), [Twitter via @mnbbrown](https://twitter.com/mnbbrown) and [Facebook](https://facebook.com/brownieoz).

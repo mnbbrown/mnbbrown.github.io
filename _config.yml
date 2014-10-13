@@ -1,12 +1,12 @@
 # Site settings
-title: Pixyll
-email: your_email@example.com
-author: John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title: Getting There Is Half The Fun
+email: me@matthewbrown.io
+author: Matthew Brown
+description: "The blog of Matthew Brown: IT consultant, entreprenuer, business student"
 baseurl: ""
-url: "http://pixyll.com"
+url: "/"
 google_analytics:
-animated: false
+animated: true
 show_related_posts: false
 
 # Build settings
@@ -15,3 +15,6 @@ permalink: pretty
 paginate: 3
 sass:
   compressed: true
+
+gems:
+  - jekyll-sitemap
