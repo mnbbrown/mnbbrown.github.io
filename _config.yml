@@ -18,3 +18,9 @@ sass:
 
 gems:
   - jekyll-sitemap
+  - typhoeus
+  - shellwords
+  - nokogiri
+
+flickr:
+     api_key: f2734c60165da790ea5e62c6ea013dee
