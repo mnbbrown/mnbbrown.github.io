@@ -5,6 +5,8 @@ published: true
 categories:
 ---
 
+![Startup Catalyst](/images/startup_catalyst.png)
+
 Exciting news! I've been accepted into the inaugural [Startup Catalyst](http://www.startupcatalyst.com.au/) program! 
 
 > Startup Catalyst is an annual mission to Silicon Valley for 
@@ -15,6 +17,6 @@ That means I'll be off to the US of A on the 16th of November for 2 weeks visiti
 
 The highlight of the program will be participating in [Startup Weekend](http://startupweekend.org/): 52 hours to come up with an idea, form a team, validate our assumptions, build a prototype and launch!
 
-{% flickr_photo 9320451419 "Large" %}
+![Google HQ](/images/google.jpg)
 
 I can't wait to start exploring the global center of technology development and business growth with Brisbane's startup elite: Steve Baxter (of Pipe Networks fame), Colin Kinner, Peter Laurie and Jason Seed - as well as 19 other up and coming tech entrepreneurs.
