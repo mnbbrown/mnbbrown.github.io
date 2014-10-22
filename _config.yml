@@ -9,6 +9,8 @@ google_analytics:
 animated: true
 show_related_posts: false
 
+excerpt_separator: <!--more-->
+
 # Build settings
 markdown: kramdown
 permalink: pretty

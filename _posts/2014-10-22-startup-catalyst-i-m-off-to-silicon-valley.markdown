@@ -9,6 +9,8 @@ categories:
 
 Exciting news! I've been accepted into the inaugural [Startup Catalyst](http://www.startupcatalyst.com.au/) program! 
 
+<!--more-->
+
 > Startup Catalyst is an annual mission to Silicon Valley for 
 > twenty young people who have the potential to be Australia’s 
 > next batch of globally successful tech entrepreneurs.
