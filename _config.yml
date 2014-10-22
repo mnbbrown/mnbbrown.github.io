@@ -4,7 +4,7 @@ email: me@matthewbrown.io
 author: Matthew Brown
 description: "The blog of Matthew Brown: IT consultant, entreprenuer, business student"
 baseurl: ""
-url: "/"
+url: "http://matthewbrown.io"
 google_analytics:
 animated: true
 show_related_posts: false
