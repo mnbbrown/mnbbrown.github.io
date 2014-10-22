@@ -5,7 +5,7 @@ author: Matthew Brown
 description: "The blog of Matthew Brown: IT consultant, entreprenuer, business student"
 baseurl: ""
 url: "http://matthewbrown.io"
-google_analytics:
+google_analytics: UA-43429204-1
 animated: true
 show_related_posts: false
 
