@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Let it snow, let it snow, let it snow!
-published: false
+published: true
 categories:
 ---
 
