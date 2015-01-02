@@ -19,7 +19,7 @@ Our second stopover was in Dubai for 2 or so hours - if you ever get the chance 
 
 ![Shakeshack](/images/mattandgenvsworld/IMG_1827-1.jpg)
 
-After downing a croissant from Paul (a French bakery that apparently has the best coffee in Dubai Airport) it was onto an A380 for the last leg to Frankfurt! Emirates has never disappointed me - the planes are new, the food is nice, the flight attendants friendly and there's free Wifi on their fleet of A380s. 
+After downing a croissant from Paul (a French bakery that apparently has the best coffee in Dubai Airport) it was onto an A380 for the last leg to Munich! Emirates has never disappointed me - the planes are new, the food is nice, the flight attendants friendly and there's free Wifi on their fleet of A380s. 
 
 Landing onto a snow lined runway, we finally arrived in Munich. We deplaned, went through (a surprisingly friendly and funny) immigration, collected our bags, and made our way to the Europcar counter. Now came the first big test of my planning aptitude. Hiring cars as a 'young driver' (under 25) is difficult and expensive. Add to this the strange QLD/Australian graduated driving licence system and you have a recipe for uncertainty and noncommittal emails from car rental companies. Would they accept my QLD provisional licence as a full licence (I had been informed they would) and would they be happy to rent the car to 22 year old me? 
 
