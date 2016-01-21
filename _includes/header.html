@@ -1,13 +1,11 @@
-<header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ site.url }}" class="site-title">{{ site.title }}</a>
-      <nav class="site-nav right">
-      </nav>
-      <div class="clearfix"></div>
-      {% if site.show_social_icons %}
-        {% include social_links.html %}
-      {% endif %}
-    </div>
+<header class="site-header">
+  <div class="logo">
+    <a href="{{ site.url }}" class="site-title"><h3>{{ site.title }}</h3></a>
+  </div>
+  <div class="icons">
+    <a href="https://twitter.com/mnbbrown"><span class="icon-twitter-1"></span></a>
+    <a href="https://github.com/mnbbrown"><span class="icon-github"></span></a>
+    <a href="https://au.linkedin.com/in/mnbbrown"><span class="icon-linkedin-1"></span></a>
+    <a href="/atom.xml"><span class="icon-rss"></span></a>
   </div>
 </header>
