@@ -2,24 +2,17 @@
 title: Getting There Is Half The Fun
 email: me@matthewbrown.io
 author: Matthew Brown
-description: "The blog of Matthew Brown: IT consultant, entreprenuer, business student"
+description: "Matthew Brown: Developer and Consultant"
 baseurl: ""
 url: "http://matthewbrown.io"
 google_analytics: UA-43429204-1
-animated: true
-show_related_posts: false
-show_social_icons: true
 
 twitter_username: mnbbrown
 github_username: mnbbrown
 linkedin_username: mnbbrown
 
-excerpt_separator: <!--more-->
-
 # Build settings
-markdown: kramdown
 permalink: pretty
-paginate: 3
 sass:
   compressed: true
 

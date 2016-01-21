@@ -1,0 +1,49 @@
+---
+# The scss file which include files from _sass/
+---
+@charset "UTF-8";
+
+body, html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 730px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+p {
+  margin-bottom: 1.7em;
+  line-height: 1.5em;
+  color: #333;
+}
+
+img {
+  width: 120%;
+  margin-left: -10%;
+  padding: 1rem 0;
+}
+
+.post-link {
+  text-decoration: none;
+  display: flex;
+  margin: 1rem 0 1rem;
+
+  h3, p {
+    display: block;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    text-align: right;
+  }
+}

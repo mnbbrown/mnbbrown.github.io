@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Linear regression with Python
-published: true
+published: false
 categories:
 ---
 
 As part of my coursework at Maastricht University we were tasked with running linear regressions of the performance of mutual funds against the performance of the market as a whole. This could have been done in excel, but with 653 different funds to run it would have taken hours. With the power of python, pandas and statsmodels the time taken was shortened dramatically.
 
-What we have: 
+What we have:
 
 	– Raw return data for 653 mutual funds.
 
-What we need: 
+What we need:
 
-	– The fund’s alpha 
+	– The fund’s alpha
 	– The coefficients for each factor of the Carhart four-factor model
 
-Other good to haves: 
+Other good to haves:
 
-	– The r-squared value of the model (how does it fit) 
+	– The r-squared value of the model (how does it fit)
 	– The p values of each factor
 
 Import the required packages:

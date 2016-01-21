@@ -1,0 +1,8 @@
+---
+layout: post
+title: B. Bus (Acc)
+published: false
+categories:
+---
+
+Yesterday I graduated from QUT with a Bachelor of Business 
