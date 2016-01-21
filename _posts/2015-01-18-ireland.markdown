@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Ireland
-icon: plane
 published: true
 categories:
 ---
