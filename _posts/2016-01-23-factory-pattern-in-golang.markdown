@@ -1,7 +1,6 @@
 ---
 layout: post
 title: The factory method pattern in Go.
-draft: true
 ---
 
 I have been writing web services in Go for approaching 2 years now. The factory pattern is something I have found particularly useful, especially for writing clean, concise, maintainable and testable code. Originally I used it just for the data access layer so I could swap in and out upon MySQL, PostgreSQL, etc without changing the application layer code but it has proved useful in many other places.
