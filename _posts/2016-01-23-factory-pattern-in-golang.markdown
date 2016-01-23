@@ -191,4 +191,4 @@ datastore, err := CreateDataStore(&map[string]string{
 
 This interface driven approach allows you to do injection and makes mocking simple for unit tests. i.e you can test against `MockDataStore` which implements the `DataStore` interface rather than having to spin up an instances of PostgreSQL for your unit tests. That said, you should still be writing integration tests against a real version of PostgreSQL to account for SQL errors and other quirks you could have missed.
 
-Like what you read? Or think I'm wrong - let me know [@mnbbrown](https://twitter.com/mnbbrown).
+Like what you read? Or think I'm wrong - let me know via [@mnbbrown](https://twitter.com/mnbbrown).
