@@ -12,6 +12,7 @@ github_username: mnbbrown
 linkedin_username: mnbbrown
 
 # Build settings
+markdown: redcarpet
 permalink: pretty
 sass:
   compressed: true

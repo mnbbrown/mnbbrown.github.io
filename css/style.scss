@@ -3,6 +3,7 @@
 ---
 @charset "UTF-8";
 @import "fonts";
+@import "solarized-light";
 
 $blue: #4078c0;
 
@@ -72,6 +73,19 @@ a {
 
 .post-meta {
   font-size: 0.895rem;
+}
+
+.highlight {
+  margin-left: -10%;
+  width: 120%;
+  border: 1px solid #cccccc;
+  overflow-x: scroll;
+  padding: 1rem;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  pre {
+    margin: 0;
+  }
 }
 
 .post-icon {
