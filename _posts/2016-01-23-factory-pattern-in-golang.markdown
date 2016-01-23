@@ -153,7 +153,7 @@ Now the magic happens. Using the `Create` function below the appropriate factory
 func CreateDatastore(conf map[string]string) (DataStore, error) {
 
 	// Query configuration for datastore defaulting to "memory".
-	engineName := conf.Get("DATASTORE", "postgres")
+	engineName := conf.Get("DATASTORE", "memory")
 
 	engineFactory, ok := datastoreFactories[engineName]
 	if !ok {
@@ -180,5 +180,7 @@ datastore, err := CreateDataStore(&map[string]string{
 	"DATASTORE_POSTGRES_DSN": "dbname=factoriesareamazing",
 })
 ```
+
+This interface driven approach allows you to do injection and makes mocking simple for unit tests. i.e you can test against `MockDataStore` which implements the `DataStore` interface rather than having to spin up an instances of PostgreSQL for your unit tests. That said, you should still be writing integration tests against a real version of PostgreSQL to account for SQL errors and other quirks you could have missed.
 
 Have I done something wrong - or should this be considered an "anti-pattern" let me know on via [@mnbbrown](https://twitter.com/mnbbrown).
