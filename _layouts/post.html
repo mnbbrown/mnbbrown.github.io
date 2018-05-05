@@ -1,30 +1,19 @@
 ---
-layout: default
+layout: new
 ---
-
-{% assign minutes = content | number_of_words | divided_by: 180 %}
-{% if minutes == 0 %}
-{% assign minutes = 1 %}
-{% endif %}
-
-<div class="post-header mb2">
-  <h1 class="py2">{% if page.draft %}[DRAFT]{% endif %} {{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span><br>
-  <span class="post-meta small">{{ minutes }} minute read</span>
+<div class="Post">
+  <a class="Post__titlelink" href="{{page.url}}"><h1 class="Post__title">{{page.title}} <span class="light">{{page.date | date_to_string }}</span></h1></a>
+{{ content }}
 </div>
 
-<article class="post-content">
-  {{ content }}
-</article>
-
-{% if site.show_related_posts %}
-  <h3 class="related-post-title">Related Posts</h3>
-  {% for post in site.related_posts %}
-    <div class="post ml2">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
-    </div>
-  {% endfor %}
-{% endif %}
+<div class="RelatedPosts">
+  <h2>Other posts</h2>
+  <ul class="Posts">
+    {% for post in site.related_posts limit:3 %}
+      <li class="PostItem">
+        <a class="PostItem__name" href="{{ post.url }}">{{ post.title }}</a>
+        <span class="PostItem__date">{{ post.date | date_to_string }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

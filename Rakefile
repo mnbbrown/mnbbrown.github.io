@@ -38,7 +38,7 @@ MAX_GEOMETRY = { w: 1280.0, h: 960.0 }
 namespace :images do
 
   task :list do
-    @jpgs = Dir.glob("**/*.jpg") - Dir.glob("_site/**/*.jpg") 
+    @jpgs = Dir.glob("**/*.jpg") - Dir.glob("_site/**/*.jpg")
     @pngs = Dir.glob("**/*.png") - Dir.glob("_site/**/*.png")
     @images = @jpgs + @pngs
     puts @images

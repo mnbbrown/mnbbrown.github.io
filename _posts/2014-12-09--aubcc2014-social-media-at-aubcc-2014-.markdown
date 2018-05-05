@@ -5,12 +5,12 @@ published: false
 categories:
 ---
 
-Last week (1st - 5th December 2014) QUT played host to the inaugural Australian Undergraduate Business Case Competition or #aubcc2014 as it was known on social media. I somehow landed myself the role of, not only, looking after Team Florida but also running social media for the duration of the competition. Having not used Twitter or Instagram extensively in the past it was learning curve for myself - but also showed me the power social media can have in bringing together groups 
+Last week (1st - 5th December 2014) QUT played host to the inaugural Australian Undergraduate Business Case Competition or #aubcc2014 as it was known on social media. I somehow landed myself the role of, not only, looking after Team Florida but also running social media for the duration of the competition. Having not used Twitter or Instagram extensively in the past it was learning curve for myself - but also showed me the power social media can have in bringing together groups
 
 - Hashtags are great for building a community.
-- No good tool for 
+- No good tool for
 - It's hard to gauge or record the use of ha
-- 
+-
 
 <div id="chart-"
 <script src="http://d3js.org/d3.v3.min.js"></script>

@@ -6,7 +6,6 @@ title: The factory method pattern in Go.
 I have been writing web services in Go for approaching 2 years now. The factory pattern is something I have found particularly useful, especially for writing clean, concise, maintainable and testable code. Originally I used it just for the data access layer so I could swap in and out upon MySQL, PostgreSQL, etc without changing the application layer code but it has proved useful in many other places.
 
 Starting at the very beginning we define our package and import the required libraries.
-
 ```go
 // Package definition and import the required stdlib packages.
 package main
@@ -22,22 +21,17 @@ import (
 ```
 
 For the purposes of illustration we will create a `DataStore` interface that is implemented by `PostgreSQLDataStore` and `MemoryDataStore`. The DataStore interface will specify 2 methods: `Name` and `FindUserNameById`.
-
 ```go
-
 var UserNotFoundError = errors.New("User not found")
 
 type DataStore interface {
 	Name() string
 	FindUserNameById(id int64) (string, error)
 }
-
 ```
 
 Then create 2 structs that implement the the interface.
-
 ```go
-
 //The first implementation.
 type PostgreSQLDataStore struct {
 	DSN string
@@ -79,7 +73,6 @@ func (mds *MemoryDataStore) FindUserNameById(id int64) (string, error) {
 	}
 	return username, nil
 }
-
 ```
 
 Now we can start to explore the power of the Factory method pattern.
@@ -87,9 +80,7 @@ Now we can start to explore the power of the Factory method pattern.
 > ...create objects without having to specify the exact 'type' of the object that will be created...
 
 First we must create `factory` methods for all our implementations that return the common interface. These are essentially `constructors` that accept a common argument. In our case this common argument is a `map[string]string`.
-
 ```go
-
 type DataStoreFactory func(conf map[string]string) (DataStore, error)
 
 func NewPostgreSQLDataStore(conf map[string]string) (DataStore, error) {
@@ -119,13 +110,10 @@ func NewMemoryDataStore(conf map[string]string) (DataStore, error) {
 	 	RWMutex: &sync.RWMutex{},
 	 }, nil
 }
-
 ```
 
 Now we must store these factory methods somewhere to be called upon as needed. I'll create a `Register` helper method to add factories to `datastoreFactories`. The `init` function registers both the factories we created above using easy to remember names.
-
 ```go
-
 var datastoreFactories = make(map[string]DataStoreFactory)
 
 func Register(name string, factory DataStoreFactory) {
@@ -146,9 +134,7 @@ func init() {
 ```
 
 Now the magic happens. Using the `Create` function below the appropriate factory method will be called using the the `conf` argument to create an instance of the `DataStore` interface.
-
 ```go
-
 func CreateDatastore(conf map[string]string) (DataStore, error) {
 
 	// Query configuration for datastore defaulting to "memory".
@@ -168,11 +154,9 @@ func CreateDatastore(conf map[string]string) (DataStore, error) {
 	// Run the factory with the configuration.
 	return engineFactory(conf)
 }
-
 ```
 
 You can use the above CreateDatastore method in your application code as follows:
-
 ```go
 datastore, err := CreateDataStore(&map[string]string{
 	"DATASTORE": "postgres",
@@ -181,7 +165,6 @@ datastore, err := CreateDataStore(&map[string]string{
 ```
 
 of use another datastore:
-
 ```go
 datastore, err := CreateDataStore(&map[string]string{
 	"DATASTORE": "memory",

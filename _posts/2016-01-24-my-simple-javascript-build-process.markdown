@@ -3,6 +3,7 @@ sitemap: false
 layout: post
 title: My simple JavaScript/React build process
 draft: true
+published: false
 ---
 
 
@@ -20,6 +21,7 @@ With a combination of gulp and webpack the process below supports the following:
 - hashed filenames(vendor-xyzabc.js) for cache busting
 
 One thing this process doesn't support is 'isomorphic' JavaScript. Let's get started by installing our dependencies:
+
 
 ```bash
 npm install --save-dev gulp \

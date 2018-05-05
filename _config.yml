@@ -2,7 +2,7 @@
 title: Matthew Brown
 email: me@matthewbrown.io
 author: Matthew Brown
-description: "Matthew Brown: Developer and Consultant"
+description: "Matthew Brown: Building Maxwell MRI"
 baseurl: ""
 url: "http://matthewbrown.io"
 google_analytics: UA-43429204-1
@@ -12,10 +12,19 @@ github_username: mnbbrown
 linkedin_username: mnbbrown
 
 # Build settings
-markdown: redcarpet
 permalink: pretty
 sass:
   compressed: true
 
-gems:
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+collections:
+  - others
+
+plugins:
   - jekyll-sitemap
