@@ -2,18 +2,16 @@
 layout: post
 title: "Startup Catalyst: I'm off to Silicon Valley!"
 published: true
-categories:
+categories: travel
 image: /images/startup_catalyst.png
 ---
 
 ![Startup Catalyst](/images/startup_catalyst.png)
 
-Exciting news! I've been accepted into the inaugural [Startup Catalyst](http://www.startupcatalyst.com.au/) program! 
+Exciting news! I've been accepted into the inaugural [Startup Catalyst](http://www.startupcatalyst.com.au/) program!
 
-<!--more-->
-
-> Startup Catalyst is an annual mission to Silicon Valley for 
-> twenty young people who have the potential to be Australia’s 
+> Startup Catalyst is an annual mission to Silicon Valley for
+> twenty young people who have the potential to be Australia’s
 > next batch of globally successful tech entrepreneurs.
 
 That means I'll be off to the US of A on the 16th of November for 2 weeks visiting companies like [Facebook](https://www.facebook.com) and [Google](https://google.com), and dropping in to accelerators like [Plug and Play Tech Center](http://www.plugandplaytechcenter.com/), [500Startups](http://500.co) and [Runway](http://www.runway.is/)!

@@ -2,7 +2,7 @@
 layout: post
 title: Cold weather, canals and culture.
 published: true
-categories:
+categories: travel
 ---
 
 After a relatively short bus ride in from Schiphol Amsterdam we arrived at our first AirBnB. AirBnB lets people put their spare bedroom or granny flat to good use, meet people from around the world and make some money at the same time. I love it because it means you're not in an impersonal hotel or hostel and get to meet the locals!  Amsterdam is famous for its skinny houses and steep staircases as a tax was levied on home owners depending on the width of the property. As you can see in the picture below where we stayed was no different. At the top of this staircase was our little ensuite bedroom - perfect for a couple of nights in Amsterdam.

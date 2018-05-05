@@ -2,7 +2,7 @@
 layout: post
 title: Setting up python, pipenv and jupyter notebook on Ubuntu 18.04
 published: true
-categories: python, pipenv, 2018, ubuntu
+categories: notes
 ---
 
 Ubuntu 18.04 Bionic Beaver (the latest LTS version) was released last week. The little script below will get `pip3` and `pipenv` up and running.

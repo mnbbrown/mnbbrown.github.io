@@ -4,9 +4,9 @@ title: Home
 ---
 
 <div class="Home">
-  <h1>Blog Posts</h1>
+  <h1>Notes & How Tos</h1>
   <ul class="Posts">
-    {% for post in site.posts %}
+    {% for post in site.categories.notes %}
       <li class="PostItem">
         <a class="PostItem__name" href="{{ post.url }}">{{ post.title }}</a>
         <span class="PostItem__date">{{ post.date | date_to_string }}</span>
@@ -14,7 +14,17 @@ title: Home
     {% endfor %}
   </ul>
 
-  <h1>Other Videos, Talks, Websites, etc</h1>
+  <h1>Travel</h1>
+  <ul class="Posts">
+    {% for post in site.categories.travel %}
+      <li class="PostItem">
+        <a class="PostItem__name" href="{{ post.url }}">{{ post.title }}</a>
+        <span class="PostItem__date">{{ post.date | date_to_string }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h1>Other links, posts, videos, etc</h1>
   <ul class="Posts">
     {% assign sorted = site.others | sort: 'date' | reverse %}
     {% for other in sorted %}

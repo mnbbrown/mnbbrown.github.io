@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Ireland
+categories: travel
 published: true
-categories:
 ---
 
 ![Wild Atlantic Way](/images/mattandgenvsworld/ireland/Ireland-91.jpg)
