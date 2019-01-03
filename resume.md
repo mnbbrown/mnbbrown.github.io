@@ -12,7 +12,7 @@ matthewbrown.io<br />
 
 Customer focused full-stack product engineer.
 
-I love building compelling digital products and high performing engineering teams. Strong commercial orientation with experience in fast-paced startups and legacy environments (i.e. health, government, and insurance).
+My passion is building complex digital products and high performing engineering teams. Strong commercial orientation with experience in fast-paced startups and legacy environments (i.e. health, government, and insurance).
 
 <center>Available for local and remote, full-time and contract work.</center>
 
