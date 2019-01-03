@@ -16,11 +16,12 @@ I love building compelling digital products and high performing engineering team
 
 <center>Available for local and remote, full-time and contract work.</center>
 
+<hr />
 
 ## Work
 #### [pdfpress](https://pdfpress.app) (November 2018 - now)
 
-Library turned side project that converts HTML to pixel perfect PDFs. Built-in support for templates and multiple engines (Google Chrome, wkhtmltopdf or weasyprint). Deployed on GCP using K8s.
+Library turned side project that converts HTML to pixel perfect PDFs. Built-in support for templates and multiple engines (Google Chrome, wkhtmltopdf or weasyprint). Written in Go and JS, deployed on GCP using K8s.
 
 *Stack: React, JS/Typescript, Go, PostgreSQL, Kubernetes, GCP, Prometheus, Zipkin and gRPC microservices*
 
@@ -28,8 +29,7 @@ Library turned side project that converts HTML to pixel perfect PDFs. Built-in s
 
 Led the turnaround and development of PrimaryLedger - an unlisted securities registry with over AUD$150 million managed on the platform. Leading design and delivery of a complex product within tight timescales with a small team of engineers.
 
-*Stack: React, Typescript, NodeJS, MySQL, Kuberentes, GCP, Jira/Trello*
-Link: https://www.labrys.io/ and https://primaryledger.io/
+*Stack: React, Typescript, NodeJS, MySQL, Kuberentes, GCP, Jira/Trello, Scrum/Agile, Git*
 
 #### [Maxwell Plus](https://maxwellplus.com) (September 2016 - August 2018) - Co-Founder and CEO
 
@@ -41,17 +41,19 @@ Co-founded with Dr. Elliot Smith, Maxwell Plus is combining deep learning with m
 * Shareholder, stakeholder and customer engagement including pitching, investor updates and customer discovery workshops.
 * Built v1 data management and machine learning platform and frontend doctor and patient experience.
 
-*Stack: GCP, Python, React, JS, Kubernetes, Tensorflow Serving, PACS, DICOM, Jira, Confluence*
+*Stack: GCP, Python, React, JS, Kubernetes, Tensorflow Serving, PACS, DICOM, Jira, Scrum/Agile, Confluence, Git*
 
-#### EY (January 2015 - September 2016) - Data and Digital consultant
+#### [EY](https://www.ey.com/) (January 2015 - September 2016) - Data and Digital consultant
 
 Developed high-performance data pipelines, dashboards, and visualisations for clients across insurance, mining, agriculture, and government. Key projects include designing a yield prediction and supply chain platform for the cotton industry and exposing modern RESTful APIs for legacy systems at a global mining firm.
 
 *Stack: SQL, MSSQL, SOAP, REST, SISS, Tableau, React, Python, XML, Java*
 
+<hr />
+
 ## Play
 * Travel (according to my tripit.com stats I did 175,975 km last year). On the list for this year is India, Morocco, Eastern Europe, NY, and Boston. Avgeek and loyal QF/oneworld flier.
-* Cooking, baking (specialties include pavlovas and croissants) and coffee.
+* Cooking, baking (specialties include pavlovas and [croissants](https://www.instagram.com/p/BpZW1b4HE5m/)) and coffee.
 * Music
 * Running
 
