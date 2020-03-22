@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  @import url("https://use.typekit.net/sjl7giv.css");
+
   * {
     box-sizing: border-box;
-  }
-
-  .wf-loading {
-    visibility: hidden;
   }
 
   html, body {

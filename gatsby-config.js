@@ -64,12 +64,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: { id: 'sjl7giv' },
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Matthew Brown`,
