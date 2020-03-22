@@ -10,31 +10,45 @@
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const path = require('path');
 
-exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
-  const blogPostTemplate = path.resolve(`src/templates/post.js`);
-
-  const draftFilter = `
+const draftFilter = `
     filter: {
       frontmatter: { draft: { ne: true }}
     }
   `;
 
-  const query = graphql(`{
+const listPosts = `
+  query IndexQuery {
     allMarkdownRemark(
-      sort: { order: ASC, fields: [fields___date] }
+      sort: { order: DESC, fields: [fields___date] }
       ${process.env.NODE_ENV === 'production' ? draftFilter : ''}
     ) {
       edges {
         node {
+          id
+          html
+          excerpt
           fields {
             path
             slug
+            rawDate: date
+            date(formatString: "DD MMM YYYY")
+          }
+          frontmatter {
+            title
+            draft
+            category
           }
         }
       }
     }
-  }`);
+  }
+`;
+
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+  const blogPostTemplate = path.resolve(`src/templates/post.js`);
+
+  const query = graphql(listPosts);
 
   return query.then(result => {
     if (result.errors) {

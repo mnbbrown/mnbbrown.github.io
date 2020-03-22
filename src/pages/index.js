@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import styled from 'styled-components';
-
 import Link from '../components/link';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -79,15 +78,24 @@ const IndexPage = ({ data }) => {
   );
 };
 
+const draftFilter = `
+    filter: {
+      frontmatter: { draft: { ne: true }}
+    }
+  `;
+
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [fields___date] }) {
       edges {
         node {
           id
+          html
+          excerpt
           fields {
             path
             slug
+            rawDate: date
             date(formatString: "DD MMM YYYY")
           }
           frontmatter {

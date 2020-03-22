@@ -2,6 +2,7 @@
 title: 30000
 category: travel
 date: 2014-10-13
+draft: true
 ---
 
 30000 people per square kilometre – Mumbai’s population density. To put that number in perspective Australia’s population density is 2 people per square kilometre. Known under british colonial control as Bombay, Mumbai is India’s largest city.
