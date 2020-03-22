@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import Link from './link';
 import { FaLinkedinIn, FaGithub, FaRss, FaTwitter } from 'react-icons/fa';
 
 const HeaderS = styled.header`
@@ -15,7 +15,7 @@ const SocialIconsS = styled.div`
   line-height: 1.6;
 `;
 
-const SocialIconS = styled.a`
+const SocialIconS = styled(Link)`
   color: inherit;
   margin-left: 10px;
   display: inline-block;
@@ -38,6 +38,13 @@ export const Header = () => (
     <SocialIconsS>
       {Object.keys(socialLinks).map(link => {
         const Icon = socialLinks[link];
+        if (link === '/feed.xml') {
+          return (
+            <SocialIconS key={link} href={link}>
+              {Icon && <Icon />}
+            </SocialIconS>
+          );
+        }
         return (
           <SocialIconS key={link} rel="noopener noreferrer" target="_blank" href={link}>
             {Icon && <Icon />}

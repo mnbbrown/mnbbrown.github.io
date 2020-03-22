@@ -124,7 +124,7 @@ module.exports = {
               });
             },
             query: listPosts,
-            output: '/rss.xml',
+            output: '/feed.xml',
             title: "Matthew Brown's Blog's RSS Feed",
           },
         ],
