@@ -40,6 +40,13 @@ module.exports = {
     siteUrl: 'https://matthewbrown.io',
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-43429204-1',
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
