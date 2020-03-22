@@ -5,6 +5,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  .wf-loading {
+    visibility: hidden;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
