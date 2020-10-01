@@ -73,4 +73,4 @@ session = scoped_session(sessionmaker(bind=engine))
 Base = declarative_base()
 ```
 
-_But be careful_ - behind the scenes Cloud Run is just containers. By default it will allow 80 concurrent requests to be made two a container before spinning up a second. SQLAlchemy's connection pool [defaults](https://docs.sqlalchemy.org/en/13/core/pooling.html#sqlalchemy.pool.QueuePool.__init__) to a min of 5 and max of 10 connections. If you're using a small db instance (like the one in this example) and expecting some load you can quickly exhaust connection limits.
+_But be careful_ - behind the scenes Cloud Run is just containers. By default it will allow 80 concurrent requests to a container before spinning up a 2nd. SQLAlchemy's connection pool [defaults](https://docs.sqlalchemy.org/en/13/core/pooling.html#sqlalchemy.pool.QueuePool.__init__) to a min of 5 and max of 10 connections. If you're using a small db instance (like the one in this example) and expecting some load you can quickly exhaust connection limits.
