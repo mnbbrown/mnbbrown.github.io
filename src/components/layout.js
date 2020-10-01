@@ -18,6 +18,7 @@ const ContainerS = styled.div`
 
 const FooterS = styled.footer`
   display: block;
+  margin: 1rem;
 `;
 
 const FooterCopyrightS = styled.span`

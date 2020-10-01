@@ -1,3 +1,6 @@
+
+console.log("Here")
+
 const draftFilter = `
     filter: {
       frontmatter: { draft: { ne: true }}

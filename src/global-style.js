@@ -36,5 +36,7 @@ export const GlobalStyle = createGlobalStyle`
     color: #4078c0;
     text-decoration: underline;
   }
-
+  code {
+    font-size: 14px !important;
+  }
 `;
