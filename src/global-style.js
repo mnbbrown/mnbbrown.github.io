@@ -42,8 +42,8 @@ export const GlobalStyle = createGlobalStyle`
 
   li {
     margin-bottom: calc(1.45rem / 2);
+    line-height: 1.5;
   }
-
 
   ol li {
     padding-left: 0;
@@ -60,5 +60,13 @@ export const GlobalStyle = createGlobalStyle`
     margin-left: 1.45rem;
     margin-bottom: calc(1.45rem / 2);
     margin-top: calc(1.45rem / 2);
+  }
+
+  figcaption {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.2rem;
+    font-size: 0.75rem;
   }
 `;

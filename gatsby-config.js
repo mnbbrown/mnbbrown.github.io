@@ -69,6 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        icons: [],
         name: `Matthew Brown`,
         short_name: `Matt Brown`,
         start_url: `/`,
@@ -94,6 +95,7 @@ module.exports = {
               withWebp: true,
               loading: 'auto',
               maxWidth: 1.2 * 650,
+              showCaptions: ['alt', 'title'],
             },
           },
         ],
