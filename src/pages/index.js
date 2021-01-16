@@ -64,6 +64,7 @@ const IndexPage = ({ data }) => {
   const category_headlines = {
     notes: 'Notes & How Tos',
     travel: 'Travel',
+    recipies: 'Recipes & Cooking Notes'
   };
 
   const category_listing = Object.keys(category_headlines).map(key => (

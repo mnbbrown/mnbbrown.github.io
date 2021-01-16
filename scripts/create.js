@@ -1,4 +1,7 @@
+#!/usr/bin/env node
+
 const slugify = require('slugify');
+const fs = require('fs');
 const args = process.argv.slice(2);
 
 function getDate() {
@@ -19,3 +22,9 @@ const filename = slugify(
     .join(' ')
     .toLowerCase(),
 );
+
+console.log(filename);
+fs.writeFileSync(`src/content/${filename}.markdown`, `---
+title: ${args.join(' ')}
+category: unfiled
+---`);

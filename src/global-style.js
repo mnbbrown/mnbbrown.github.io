@@ -39,4 +39,26 @@ export const GlobalStyle = createGlobalStyle`
   code {
     font-size: 14px !important;
   }
+
+  li {
+    margin-bottom: calc(1.45rem / 2);
+  }
+
+
+  ol li {
+    padding-left: 0;
+  }
+  ul li {
+    padding-left: 0;
+  }
+  li > ol {
+    margin-left: 1.45rem;
+    margin-bottom: calc(1.45rem / 2);
+    margin-top: calc(1.45rem / 2);
+  }
+  li > ul {
+    margin-left: 1.45rem;
+    margin-bottom: calc(1.45rem / 2);
+    margin-top: calc(1.45rem / 2);
+  }
 `;
