@@ -64,7 +64,7 @@ function SEO({ description, lang, meta, title, image }) {
   if (image) {
     _meta = _meta.concat([
       {
-        name: 'og:image',
+        property: 'og:image',
         content: image.src,
       },
       {
