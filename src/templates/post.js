@@ -61,7 +61,7 @@ const Post = ({ data = {}, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={description} />
+      <SEO title={post.frontmatter.title} description={description} image={image}/>
       <PostTitleS>
         {post.frontmatter.title}
         <PostDateS>{post.fields.date}</PostDateS>

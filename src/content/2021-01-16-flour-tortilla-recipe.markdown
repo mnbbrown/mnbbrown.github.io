@@ -1,6 +1,7 @@
 ---
 title: Flour Tortilla Recipe
 category: recipies
+featured: ../images/tortilla/IMG_1416.jpg
 ---
 
 Inspired by Joshua Weissman's 5 Ingredient Homemade Flour Tortillas and a bunch of reddit comments about making the perfect mission style flour tortilla.
@@ -33,7 +34,6 @@ Then fill with whatever ingredients tickle your fancy.
 ## Pictures
 
 ![Rolling out](../images/tortilla/IMG_1416.jpg)
-
 ![Ready to flip](../images/tortilla/IMG_1414.jpg)
 ![Flipped](../images/tortilla/IMG_1415.jpg)
 ![All done](../images/tortilla/IMG_1417.jpg "All done")
