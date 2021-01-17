@@ -95,9 +95,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const filename = createFilePath({ node, getNode, basePath: `pages` });
+    const filename = createFilePath({ node, getNode, basePath: `pages`, trailingSlash: false });
+    console.log(filename);
     // get the date and title from the file name
-    const [, date, slug] = filename.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)\/$/);
+    const [, date, slug] = filename.match(/^\/([\d]{4}-[\d]{2}-[\d]{2})-{1}(.+)$/);
     const date_parts = date.split('-');
     const path = '/' + date_parts.concat([slug]).join('/');
     createNodeField({ node, name: `slug`, value: slug });
