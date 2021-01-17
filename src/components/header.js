@@ -22,10 +22,10 @@ const SocialIconS = styled(Link)`
 `;
 
 const socialLinks = {
-  'https://twitter.com/mnbbrown': FaTwitter,
-  'https://github.com/mnbbrown': FaGithub,
-  'https://au.linkedin.com/in/mnbbrown': FaLinkedinIn,
-  '/feed.xml': FaRss,
+  'https://twitter.com/mnbbrown': [FaTwitter, "Twitter"],
+  'https://github.com/mnbbrown': [FaGithub, "Github"],
+  'https://au.linkedin.com/in/mnbbrown': [FaLinkedinIn, "LinkedIn"],
+  '/feed.xml': [FaRss, "RSS"],
 };
 
 export const Header = () => (
@@ -37,17 +37,17 @@ export const Header = () => (
     </Link>
     <SocialIconsS>
       {Object.keys(socialLinks).map(link => {
-        const Icon = socialLinks[link];
+        const [Icon, title] = socialLinks[link];
         if (link === '/feed.xml') {
           return (
             <SocialIconS key={link} href={link}>
-              {Icon && <Icon />}
+              {Icon && <Icon title={title} />}
             </SocialIconS>
           );
         }
         return (
           <SocialIconS key={link} rel="noopener noreferrer" target="_blank" href={link}>
-            {Icon && <Icon />}
+            {Icon && <Icon title={title} />}
           </SocialIconS>
         );
       })}
