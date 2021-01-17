@@ -47,7 +47,7 @@ function SEO({ description, lang, meta, title, image, location }) {
       },
       {
         property: `og:url`,
-        content: site.siteMetadata.siteUrl + location.pathname.replace(/\/+$/, ""),
+        content: site.siteMetadata.siteUrl + location.pathname,
       },
       {
         name: `twitter:card`,
@@ -90,8 +90,8 @@ function SEO({ description, lang, meta, title, image, location }) {
       link={[
         {
           rel: "canonical",
-          key: site.siteMetadata.siteUrl + location.pathname.replace(/\/+$/, ""),
-          href: site.siteMetadata.siteUrl + location.pathname.replace(/\/+$/, ""),
+          key: site.siteMetadata.siteUrl + location.pathname,
+          href: site.siteMetadata.siteUrl + location.pathname,
         }
       ]}
     />
