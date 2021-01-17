@@ -52,7 +52,7 @@ const PostContentS = styled.div`
   }
 `;
 
-const Post = ({ data = {}, pageContext }) => {
+const Post = ({ data = {}, location }) => {
   const { markdownRemark: post } = data;
 
   const description = post.frontmatter.excerpt ? post.frontmatter.excerpt : post.excerpt;
@@ -61,7 +61,7 @@ const Post = ({ data = {}, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={description} image={image}/>
+      <SEO location={location} title={post.frontmatter.title} description={description} image={image}/>
       <PostTitleS>
         {post.frontmatter.title}
         <PostDateS>{post.fields.date}</PostDateS>
