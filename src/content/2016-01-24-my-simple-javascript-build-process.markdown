@@ -1,9 +1,9 @@
 ---
-sitemap: false
 layout: post
 title: My simple JavaScript/React build process
 draft: true
 published: false
+sitemap: false
 ---
 
 

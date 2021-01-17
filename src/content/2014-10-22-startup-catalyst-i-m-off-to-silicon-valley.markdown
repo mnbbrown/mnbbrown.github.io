@@ -1,8 +1,10 @@
 ---
 title: "Startup Catalyst: I'm off to Silicon Valley!"
 date: 2014-10-22
-category: travel
 image: /images/startup_catalyst.png
+draft: true
+published: false
+sitemap: false
 ---
 
 ![Startup Catalyst](/images/startup_catalyst.png)
