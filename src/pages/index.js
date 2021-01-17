@@ -49,7 +49,7 @@ const PostListing = ({ title, posts }) => (
   </>
 );
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const by_categories = data.allMarkdownRemark.edges
     .map(result => result.node)
     .reduce(
@@ -73,7 +73,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Home" location={location} />
       {category_listing}
     </Layout>
   );
