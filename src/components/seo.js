@@ -47,7 +47,7 @@ function SEO({ description, lang, meta, title, image }) {
       },
       {
         property: `og:url`,
-        content: site.siteMetadata.siteUrl + location.pathname,
+        content: site.siteMetadata.siteUrl + location.pathname.replace(/\/+$/, ""),
       },
       {
         name: `twitter:card`,
@@ -87,6 +87,13 @@ function SEO({ description, lang, meta, title, image }) {
       title={title}
       titleTemplate={`%s - ${site.siteMetadata.title}`}
       meta={_meta}
+      link={[
+        {
+          rel: "canonical",
+          key: site.siteMetadata.siteUrl + location.pathname.replace(/\/+$/, ""),
+          href: site.siteMetadata.siteUrl + location.pathname.replace(/\/+$/, ""),
+        }
+      ]}
     />
   );
 }
