@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icons: [],
+        icon: './src/favicon.png',
         name: `Matthew Brown`,
         short_name: `Matt Brown`,
         start_url: `/`,
