@@ -30,11 +30,13 @@ For 4 pizzas... using the same ratios as last time (before I started documenting
 
 ### Toppings
 
-- Margherita x2
+- Margherita
 - Cajun beef mince + caramelised onions
 - Salami, mozerella, rocket
-- Salami, mushroom
+- Mushroom, Jalepeno, mozerella
 
 ### Eating notes
 
 Toppings were great. Bases/dough is still a little "bready". I think this is maybe caused by either a. oven too hot (hence burning without the interior having time to cook) b. hydration or salt content percentage not quite right.
+
+![The final product](../images/pizza/final_23012021.png "The final product")

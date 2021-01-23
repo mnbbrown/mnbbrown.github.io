@@ -69,4 +69,9 @@ export const GlobalStyle = createGlobalStyle`
     padding-top: 0.2rem;
     font-size: 0.75rem;
   }
+
+  img {
+    object-fit:cover;
+    object-position:center;
+  }
 `;
