@@ -1,6 +1,6 @@
 ---
 title: Flour Tortilla Recipe
-category: recipies
+category: recipes
 featured: ../images/tortilla/IMG_1416.jpg
 ---
 
