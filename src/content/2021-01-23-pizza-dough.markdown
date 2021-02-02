@@ -40,3 +40,17 @@ For 4 pizzas... using the same ratios as last time (before I started documenting
 Toppings were great. Bases/dough is still a little "bready". I think this is maybe caused by either a. oven too hot (hence burning without the interior having time to cook) b. hydration or salt content percentage not quite right.
 
 ![The final product](../images/pizza/final_23012021.png "The final product")
+
+
+## Feb 1 2021
+
+For 4 pizzas... This time I used the ratios and timings from https://github.com/hendricius/pizza-dough.
+
+Dough was cold-proofed for 48 hours instead of 24 hours. Also, I accidently covered the pre-proofed dough in oil.. this meant the dough tasted better (longer proofing time) but had a weird crisp and colour (because of the oil). So.. 1 step forward.. 1 step backward.
+
+### Toppings
+
+- Margherita
+- French salami, mozerrella, rocket
+- Prawn, Garlic and Chill
+- Mushroom, caramelised onion
