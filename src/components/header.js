@@ -22,10 +22,10 @@ const SocialIconS = styled(Link)`
 `;
 
 const socialLinks = {
-  'https://twitter.com/mnbbrown': [FaTwitter, "Twitter"],
-  'https://github.com/mnbbrown': [FaGithub, "Github"],
-  'https://au.linkedin.com/in/mnbbrown': [FaLinkedinIn, "LinkedIn"],
-  '/feed.xml': [FaRss, "RSS"],
+  'https://twitter.com/mnbbrown': [FaTwitter, 'Twitter'],
+  'https://github.com/mnbbrown': [FaGithub, 'Github'],
+  'https://au.linkedin.com/in/mnbbrown': [FaLinkedinIn, 'LinkedIn'],
+  '/feed.xml': [FaRss, 'RSS'],
 };
 
 export const Header = () => (
@@ -36,7 +36,7 @@ export const Header = () => (
       </h1>
     </Link>
     <SocialIconsS>
-      {Object.keys(socialLinks).map(link => {
+      {Object.keys(socialLinks).map((link) => {
         const [Icon, title] = socialLinks[link];
         if (link === '/feed.xml') {
           return (

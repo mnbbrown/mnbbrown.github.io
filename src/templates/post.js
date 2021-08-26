@@ -61,7 +61,7 @@ const Post = ({ data = {}, location }) => {
 
   return (
     <Layout>
-      <SEO location={location} title={post.frontmatter.title} description={description} image={image}/>
+      <SEO location={location} title={post.frontmatter.title} description={description} image={image} />
       <PostTitleS>
         {post.frontmatter.title}
         <PostDateS>{post.fields.date}</PostDateS>

@@ -42,7 +42,7 @@ const PostListing = ({ title, posts }) => (
   <>
     <h1>{title}</h1>
     <PostListS>
-      {posts.map(post => (
+      {posts.map((post) => (
         <Post key={post.fields.slug} date={post.fields.date} title={post.frontmatter.title} path={post.fields.path} />
       ))}
     </PostListS>
@@ -51,7 +51,7 @@ const PostListing = ({ title, posts }) => (
 
 const IndexPage = ({ data, location }) => {
   const by_categories = data.allMarkdownRemark.edges
-    .map(result => result.node)
+    .map((result) => result.node)
     .reduce(
       (result, post) => ({
         ...result,
@@ -64,10 +64,10 @@ const IndexPage = ({ data, location }) => {
   const category_headlines = {
     notes: 'Notes & How Tos',
     travel: 'Travel',
-    recipes: 'Recipes & Cooking Notes'
+    recipes: 'Recipes & Cooking Notes',
   };
 
-  const category_listing = Object.keys(category_headlines).map(key => (
+  const category_listing = Object.keys(category_headlines).map((key) => (
     <PostListing key={key} title={category_headlines[key]} posts={by_categories[key] || []} />
   ));
 

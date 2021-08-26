@@ -1,6 +1,3 @@
-
-console.log("Here")
-
 const draftFilter = `
     filter: {
       frontmatter: { draft: { ne: true }}
@@ -119,7 +116,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.fields.rawDate,

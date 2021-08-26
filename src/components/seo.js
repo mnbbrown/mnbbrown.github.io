@@ -29,42 +29,42 @@ function SEO({ description, lang, meta, title, image, location }) {
   const metaDescription = description || site.siteMetadata.description;
 
   let _meta = [
-      {
-        name: `description`,
-        content: metaDescription,
-      },
-      {
-        property: `og:title`,
-        content: title,
-      },
-      {
-        property: `og:description`,
-        content: metaDescription,
-      },
-      {
-        property: `og:type`,
-        content: `website`,
-      },
-      {
-        property: `og:url`,
-        content: site.siteMetadata.siteUrl + location.pathname,
-      },
-      {
-        name: `twitter:card`,
-        content: `summary`,
-      },
-      {
-        name: `twitter:creator`,
-        content: site.siteMetadata.author,
-      },
-      {
-        name: `twitter:title`,
-        content: title,
-      },
-      {
-        name: `twitter:description`,
-        content: metaDescription,
-      }
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:title`,
+      content: title,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:type`,
+      content: `website`,
+    },
+    {
+      property: `og:url`,
+      content: site.siteMetadata.siteUrl + location.pathname,
+    },
+    {
+      name: `twitter:card`,
+      content: `summary`,
+    },
+    {
+      name: `twitter:creator`,
+      content: site.siteMetadata.author,
+    },
+    {
+      name: `twitter:title`,
+      content: title,
+    },
+    {
+      name: `twitter:description`,
+      content: metaDescription,
+    },
   ].concat(meta);
   if (image) {
     _meta = _meta.concat([
@@ -75,8 +75,8 @@ function SEO({ description, lang, meta, title, image, location }) {
       {
         name: 'twitter:image',
         content: site.siteMetadata.siteUrl + image.src,
-      }
-    ])
+      },
+    ]);
   }
 
   return (
@@ -89,10 +89,10 @@ function SEO({ description, lang, meta, title, image, location }) {
       meta={_meta}
       link={[
         {
-          rel: "canonical",
+          rel: 'canonical',
           key: site.siteMetadata.siteUrl + location.pathname,
           href: site.siteMetadata.siteUrl + location.pathname,
-        }
+        },
       ]}
     />
   );
