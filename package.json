@@ -7,7 +7,7 @@
   "dependencies": {
     "gatsby": "^2.19.45",
     "gatsby-cli": "^2.12.102",
-    "gatsby-image": "^2.2.44",
+    "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^3.12.0",
     "gatsby-plugin-google-analytics": "^2.2.0",
     "gatsby-plugin-manifest": "^2.2.48",
