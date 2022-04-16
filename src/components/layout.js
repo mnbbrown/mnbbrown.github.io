@@ -19,6 +19,10 @@ const ContainerS = styled.div`
 const FooterS = styled.footer`
   display: block;
   margin: 1rem;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const FooterCopyrightS = styled.span`
