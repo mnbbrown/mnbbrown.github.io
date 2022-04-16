@@ -74,4 +74,15 @@ export const GlobalStyle = createGlobalStyle`
     object-fit:cover;
     object-position:center;
   }
+
+
+@media print {
+  html, body {
+    font-size: 12px;
+  }
+
+  .hide-print {
+    display: none;
+  }
+}
 `;

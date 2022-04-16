@@ -7,6 +7,10 @@ const HeaderS = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media print {
+    display: none;
+  }
 `;
 
 const SocialIconsS = styled.div`
@@ -29,7 +33,7 @@ const socialLinks = {
 };
 
 export const Header = () => (
-  <HeaderS>
+  <HeaderS className="hide-print">
     <Link to="/" style={{ color: 'inherit' }}>
       <h1 style={{ display: 'inline-block' }}>
         Matthew Brown<span style={{ opacity: 0.2 }}>&apos;s Blog</span>
