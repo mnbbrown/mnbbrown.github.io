@@ -149,13 +149,17 @@ const Resume = ({ location }) => {
           Matthew Brown <h1>Resume</h1>
         </TitleNameS>
         <SummaryS>
-          <p>I am currently a Principal Software Engineer at GoCardless.</p>
           <p>
-            My passion is building complex technical systems and growing high performing engineering teams. I've spent
-            most of my career at the pointy end of startups and new businesses - mostly in regulated environments such
-            as healthcare and (more recently) fintech. I've led large engineering teams and shipped production code
-            using a wide variety of languages, frameworks and cloud providers - across frontend, backend,
-            infrastructure, data platforms and hardware.
+            I am currently a Principal Software Engineer at <a href="https://gocardless.com">GoCardless</a>
+          </p>
+          <p>
+            My passion is growing high performing engineering teams and building complex technical systems. I've spent
+            most of my career at startups and new businesses laser focused on building great teams and great products
+            that solve real problems - mostly in regulated environments such as healthcare and fintech.
+          </p>
+          <p>
+            I'm not afraid of getting my hands dirty and have shipped production code in a wide variety of languages,
+            frameworks and cloud providers - across frontend, backend, infrastructure, data platforms and hardware.
           </p>
           <p>
             Outside of work I love travel, food (especially all things{' '}
@@ -176,19 +180,13 @@ const Resume = ({ location }) => {
             >
               aviation
             </a>{' '}
-            - if all goes to plan I'll have my{' '}
-            <a href="https://twitter.com/mnbbrown/status/1502738382782349316?s=20&t=BjnBvytvzqHdeyzNXJfBHA">PPL(A)</a>{' '}
-            within the month. I plan to continue my training (IR, Night, Multi-Engine and Commercial) and have
-            aspirations to fly from the{' '}
+            - I'm a licensed private pilot and I plan to continue my training and have aspirations to fly from the{' '}
             <a href="https://en.wikipedia.org/wiki/Kangaroo_Route" target="_blank" rel="noreferrer">
               UK to Australia
             </a>{' '}
             in a zero-emission aircraft.
           </p>
-          <p>
-            I also have a bunch of side projects that I like to work on when time allows. These include an operations
-            and scheduling app for flight schools, and a flight telemetry app for student pilots.
-          </p>
+          <p>I also have a bunch of side projects that I like to work on when time allows.</p>
         </SummaryS>
         <Company name="GoCardless" link="https://gocardless.com/" role="Principal Software Engineer" start="July 2021">
           <Role
@@ -204,14 +202,14 @@ const Resume = ({ location }) => {
             ]}
           >
             At GoCardless I work with the product teams responsible for managing our risk - across anti-fraud,
-            anti-money laundering, compliance and credit risk. The role is a blend of hands-on development, architecture
-            and system design, company wide technical leadership and mentorship.
+            anti-money laundering, compliance and credit risk. The role is a blend of architecture and system design,
+            company wide technical leadership, mentorship and hands-on development,
           </Role>
         </Company>
         <Company name="BCG Digital Ventures" link="https://bcgdv.com/" start="Jan 2019" end="July 2021">
           <Role>
             At DV I was responsible for the technical architecture and delivery of complex venture builds with very
-            compressed timeframes, coordinating with product, design and commercial leadership, and communicating with
+            compressed timeframes, collaborating with product, design and commercial leadership, and engaging with
             stakeholders including the board and venture partners.
           </Role>
         </Company>
@@ -300,7 +298,7 @@ const Resume = ({ location }) => {
             effects of current methods. Originally called Maxwell MRI.
             <ListS>
               <li>Grew team from 2 founders to over 20 engineers and researchers</li>
-              <li>Raised over $3.5mil AUD from venture funds, government grants, and high-net-worths</li>
+              <li>Raised over $3.5mil AUD from leading venture funds, government grants, and high-net-worths</li>
               <li>
                 Developed research and product relationships with world-leading cancer centers including UCL, the Garvan
                 Institute and the US Dept of Veterans Affairs.
