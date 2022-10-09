@@ -154,8 +154,8 @@ const Resume = ({ location }) => {
           </p>
           <p>
             My passion is growing high performing engineering teams and building complex technical systems. I've spent
-            most of my career at startups and new businesses laser focused on building great teams and great products
-            that solve real problems - mostly in regulated environments such as healthcare and fintech.
+            most of my career at startups and new businesses building great cultures, teams and products that solve real
+            problems - mostly in regulated environments such as healthcare and fintech.
           </p>
           <p>
             I'm not afraid of getting my hands dirty and have shipped production code in a wide variety of languages,
