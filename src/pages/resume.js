@@ -180,13 +180,12 @@ const Resume = ({ location }) => {
             >
               aviation
             </a>{' '}
-            - I'm a licensed private pilot and I plan to continue my training and have aspirations to fly from the{' '}
+            - I'm a licensed private pilot working towards my instrument rating and have aspirations to fly from the{' '}
             <a href="https://en.wikipedia.org/wiki/Kangaroo_Route" target="_blank" rel="noreferrer">
               UK to Australia
             </a>{' '}
             in a zero-emission aircraft.
           </p>
-          <p>I also have a bunch of side projects that I like to work on when time allows.</p>
         </SummaryS>
         <Company name="GoCardless" link="https://gocardless.com/" role="Principal Software Engineer" start="July 2021">
           <Role
@@ -313,6 +312,21 @@ const Resume = ({ location }) => {
             </ListS>
           </Role>
         </Company>
+        <h2>Side Projects</h2>
+
+        <p>
+          I also have some side projects that I like to work on when time allows:
+          <ListS>
+            <li>
+              <a href="https://nextflight.app" target="_blank" rel="noreferrer">
+                nextflight
+              </a>{' '}
+              - a scheduling app for flight schools and charter operators
+            </li>
+            <li>jetstream - a flight telemetry app for iOS</li>
+            <li>equity - budgeting and weath management</li>
+          </ListS>
+        </p>
         <h2>Education</h2>
         <p>Bachelor of Business, Queensland University of Technology </p>
         <h2>Other important bits</h2>
@@ -321,8 +335,9 @@ const Resume = ({ location }) => {
           My email is <a href="mailto:me@matthewbrown.io">me@matthewbrown.io</a>, and phone is +44 7927 618 921.
         </p>
         <p>
-          You can follow me on twitter via @mnnbrown and LinkedIn (
-          <a href="https://www.linkedin.com/in/mnbbrown">https://www.linkedin.com/in/mnbbrown</a>)
+          You can follow me on twitter via @mnnbrown, LinkedIn (
+          <a href="https://www.linkedin.com/in/mnbbrown">https://www.linkedin.com/in/mnbbrown</a>) and Github (
+          <a href="https://github.com/mnbbrown">@mnbbrown</a>)
         </p>
       </ResumeS>
     </Layout>
