@@ -1,0 +1,70 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+import FormattedDate from '../components/FormattedDate.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, publishedDate, description } = Astro.props;
+---
+
+<Base title={title} description={description}>
+  <article>
+    <h1>
+      {title}
+      <FormattedDate date={publishedDate} />
+    </h1>
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+</Base>
+
+<style is:global>
+  article h1 {
+    font-size: 2rem;
+  }
+
+  article h1 time {
+    opacity: 0.2;
+    display: block;
+  }
+
+  article p {
+    margin-top: 0;
+    margin-bottom: 1.7em;
+    line-height: 1.6em;
+  }
+
+  .gatsby-resp-image-wrapper {
+    width: 120%;
+    margin-left: -10% !important;
+    padding: 1rem 0;
+  }
+
+  pre {
+    font-size: 0.8rem;
+    margin-left: -1.75rem;
+    width: calc(100% + 3.5rem);
+    padding: 1rem;
+    overflow: scroll;
+  }
+
+  blockquote {
+    background-color: #fffaf0;
+    font-size: 0.9375rem;
+    margin: 1.75rem 0;
+    padding: 1em;
+  }
+
+  blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 120%;
+    margin-left: -10% !important;
+    padding: 1rem 0;
+  }
+</style>

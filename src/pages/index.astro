@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import { getCollection } from 'astro:content';
+import { groupBy, buildBlogPath } from '../helpers';
+
+const postsByCategory = groupBy((await getCollection('blog')).
+  filter(item => item.data.category && !item.data.draft).
+  sort(
+	  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
+  ), item => item.data.category);
+---
+<Base>
+  <h2>Notes & How Tos</h2>
+  <ul class="post-list">
+    {postsByCategory['notes'].map(post => (
+      <li class="post">
+        <a href={buildBlogPath(post.slug)}>{post.data.title}</a>
+        <FormattedDate date={post.data.publishedDate} />
+      </li>
+    ))}
+  </ul>
+  <h2>Travel</h2>
+  <ul class="post-list">
+    {postsByCategory['travel'].map(post => (
+      <li class="post">
+        <a href={buildBlogPath(post.slug)}>{post.data.title}</a>
+        <FormattedDate date={post.data.publishedDate} />
+      </li>
+    ))}
+  </ul>
+  <h2>Recipes</h2>
+  <ul class="post-list">
+    {postsByCategory['recipes'].map(post => (
+      <li class="post">
+        <a href={buildBlogPath(post.slug)}>{post.data.title}</a>
+        <FormattedDate date={post.data.publishedDate} />
+      </li>
+    ))}
+  </ul>
+</Base>
+
+<style>
+  .post-list {
+    list-style-type: none;
+    margin-bottom: 2em;
+    padding-left: 0;
+  }
+
+  .post-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .post-list a {
+    display: inline-block;
+    flex: 1;
+  }
+
+  .post-list :global(time) {
+    margin-right: 1rem;
+    color: #aaa;
+    font-family: Monaco, 'Courier New', monospace;
+    font-size: 85%;
+  }
+</style>
