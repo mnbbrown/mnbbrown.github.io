@@ -41,6 +41,23 @@ const renderedTitle = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE;
   <meta property="twitter:title" content={title} />
   {description && <meta property="twitter:description" content={description} />}
 
+
+  <!-- Google Analytics -->
+  <script
+    type="text/partytown"
+    src="https://www.googletagmanager.com/gtag/js?id=386780270"
+  ></script>
+
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "386780270");
+  </script>
+
+
   <body>
     <div class="container">
       <header class="hide-print">
