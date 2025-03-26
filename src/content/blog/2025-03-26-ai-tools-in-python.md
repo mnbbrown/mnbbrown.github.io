@@ -7,11 +7,15 @@ publishedDate: 2025-03-26
 
 With the explosion of agent frameworks we’re seeing different approaches to defining agent “tools” in python. The two immediately obvious approaches are using the `docstring` or using a `pydantic model` to define the tool arguments. 
 
-> **Opinions wanted**: I don’t have an agent framework to shill, nor do I really have a strong opinion about either… What do you think? Comment on Hacker News.
+> **Opinions wanted**: I don’t have an agent framework to shill, nor do I really have a strong opinion about either right now. 
+>
+> I also reserve the right to change the pros and cons as they become obvious over time. 
+> 
+> What do you think? Comment on [Hacker News](https://news.ycombinator.com/item?id=43480745).
 
-### Option 1: docstring
+## Option 1: docstring
 
-A simple python function with an optional docstring to define additional context (like field descriptions)
+A simple python function with an optional docstring to define additional context (like field descriptions).
 
 ```python
 def search_customer(postcode: str | None = None):
@@ -19,12 +23,12 @@ def search_customer(postcode: str | None = None):
 
     Args:
         postcode: The customer's postcode
-  """
+    """
 ```
 
-Pros:
+#### Pros
 
-*This style is used by lots of agent frameworks*
+*This style is used by lots of agent frameworks:*
 
 - PydanticAI ([see docs](https://ai.pydantic.dev/tools/#function-tools-and-schema))
 - OpenAI Agents Framework ([see docs](https://openai.github.io/openai-agents-python/tools/))
@@ -32,13 +36,13 @@ Pros:
 
 Internally all of these tools convert the signature + docstring into a pydantic model…
 
-*Can’t do funny things with models like union types:* For example `SearchCustomerParamsV1 | SearchCustomerParamsV2` which produces `anyOf` schemas which aren’t supported by the models.
+*Can’t do funny things with models like union types.* For example `SearchCustomerParamsV1 | SearchCustomerParamsV2` which produces `anyOf` schemas which aren’t supported by the models.
 
-*You’re just writing normal python functions. T*ype hints in function signatures are more visible in IDEs without having to look at model definitions. Better integration with existing tooling (mypy, pylint, etc.)
+*You’re just writing normal python functions.* Type hints in function signatures are more visible in IDEs without having to look at model definitions. Better integration with existing tooling (mypy, pylint, etc.)
 
-Cons:
+#### Cons
 
-*Action arguments interleaved with magic/injected variables.* For example in the below example it may not be super clear which arguments are model provided vs dependency injected.
+*Action arguments interleaved with magic/injected variables.*  For example in the below example it may not be super clear which arguments are model provided vs dependency injected.
 
 ```python
 @tool()
@@ -47,8 +51,8 @@ def search_customer(
 	ctx: Context,  # special variable name/type which is injected by us
 	# dependency injected arguments (FastAPI style)
 	crm_client: Client = Depends(get_crm_client),
-  crm_customer: Customer | None = Depends(get_crm_customer),
-  session: Session = Depends(get_db_session),
+    crm_customer: Customer | None = Depends(get_crm_customer),
+    session: Session = Depends(get_db_session),
 ):
 	"""Search for customers.
 
@@ -59,9 +63,9 @@ def search_customer(
 
 *Documentation and constraints are separated from the type definitions* (i.e. no pydantic validation). Also `docstrings` can be unwieldy and long winded. 
 
-### Option 2: pydantic model
+## Option 2: pydantic model
 
-In this case the function has one special argument called “arguments” or “params” which is a pydantic model that represents the function arguments. 
+In this case the function has one special argument called `arguments` or `params` which is a pydantic model that represents the tool arguments. 
 
 ```python
 class SearchCustomerArguments(BaseModel):
@@ -72,7 +76,7 @@ def search_customer(arguments: SearchCustomerArguments):
 	...
 ```
 
-Pros:
+#### Pros
 
 *Very similar to FastAPI style*
 
@@ -81,8 +85,8 @@ Pros:
 async def create_diary_event(
     arguments: CreateDiaryEventV1Args,
     crm_client: Client = Depends(get_crm_client),
-	  crm_customer: Customer | None = Depends(get_crm_customer),
-	  session: Session = Depends(get_db_session),
+    crm_customer: Customer | None = Depends(get_crm_customer),
+	session: Session = Depends(get_db_session),
 ):
     ...
 ```
@@ -92,9 +96,9 @@ async def create_diary_event(
 1. Validation (field_validator, model_validator,  Field(gt=0), etc)
 2. Field descriptions
 
-Cons:
+#### Cons:
 
-*No precendence:* Not used by other frameworks so if we wanted to create an MCP server with our functions we’d have to explode the pydantic model into a function.
+*Not easily adaptable:* Difficult to adapt to other MCP server with your tools we’d you'd have to explode the pydantic model into a standard python function, or dive into the internals of the agent frameworks.
 
 *Unsupported pydantic features:* Can use pydantic features that are not supported by models (union → anyOf, nested models, etc) 
 
@@ -106,5 +110,7 @@ In this scenario the `@tool()` magic would inspect the function signature:
 - It uses Option 1
 
 In this case we could use the docstring approach for simple functions with few parameters/limited validation, and pydantic models where we want validation.
+
+This is similar to [LangChain](https://python.langchain.com/docs/how_to/custom_tools/#creating-tools-from-functions)
 
 What are your thoughts?
