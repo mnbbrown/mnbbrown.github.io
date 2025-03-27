@@ -3,12 +3,30 @@ import Base from '../layouts/Base.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { getCollection } from 'astro:content';
 import { groupBy, buildBlogPath } from '../helpers';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const postsByCategory = groupBy((await getCollection('blog')).
   filter(item => item.data.category && !item.data.draft).
   sort(
 	  (a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()
   ), item => item.data.category);
+
+// Website schema
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": SITE_TITLE,
+  "description": SITE_DESCRIPTION,
+  "url": Astro.site?.toString() || "https://matthewbrown.io",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.google.com/search?q=site:matthewbrown.io {search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 <Base>
   <h2>Notes & How Tos</h2>
@@ -20,6 +38,7 @@ const postsByCategory = groupBy((await getCollection('blog')).
       </li>
     ))}
   </ul>
+  
   <h2>Travel</h2>
   <ul class="post-list">
     {postsByCategory['travel'].map(post => (
@@ -38,6 +57,9 @@ const postsByCategory = groupBy((await getCollection('blog')).
       </li>
     ))}
   </ul>
+
+  <!-- Add structured data -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 </Base>
 
 <style>

@@ -2,9 +2,24 @@
 import Base from '../layouts/Base.astro';
 import Role from '../components/ResumeRole.astro';
 import Company from '../components/ResumeCompany.astro';
+
+// Create Person schema for SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Matthew Brown",
+  "jobTitle": "Head of Engineering",
+  "url": "https://matthewbrown.io",
+  "sameAs": [
+    "https://github.com/mnbbrown",
+    "https://www.linkedin.com/in/mnbbrown"
+  ]
+};
 ---
 
 <Base page="Resume">
+  <meta name="robots" content="noindex, nofollow" slot="head" />
+  <link rel="canonical" href="https://matthewbrown.io" slot="head" />
   <div>    
     <div style="margin-bottom: 2rem">
       <p>
@@ -195,4 +210,7 @@ import Company from '../components/ResumeCompany.astro';
     </ul>
     </p>
   </div>
+
+  <!-- Add structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 </Base>

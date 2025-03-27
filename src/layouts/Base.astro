@@ -9,57 +9,67 @@ interface Props {
   page?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// Ensure we have a proper canonical URL with https://
 const { title, page = "Blog", description = SITE_DESCRIPTION } = Astro.props;
+// Format pathname correctly by removing trailing slash if not homepage
+const pathname = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.replace(/\/$/, '');
+const canonicalURL = new URL(pathname, Astro.site);
 const renderedTitle = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE;
 ---
 
 <!doctype html>
 <html lang="en">
-  <!-- Global Metadata -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="sitemap" href="/sitemap-index.xml" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="generator" content={Astro.generator} />
+  <head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+  
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL.toString()} />
+  
+    <!-- Primary Meta Tags -->
+    <title>{renderedTitle}</title>
+    <meta name="title" content={renderedTitle} />
+    {description && <meta name="description" content={description} />}
+    <meta name="author" content="Matthew Brown" />
+    <meta name="robots" content="index, follow" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title={SITE_TITLE} />
+  
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.toString()} />
+    <meta property="og:title" content={renderedTitle} />
+    {description && <meta property="og:description" content={description} />}
+  
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL.toString()} />
+    <meta property="twitter:title" content={renderedTitle} />
+    {description && <meta property="twitter:description" content={description} />}
+    
+    <!-- Allow pages to add additional head elements -->
+    <slot name="head" />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href={canonicalURL} />
+    <!-- Google Analytics -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-27X11PSQ9J"
+    ></script>
 
-  <!-- Primary Meta Tags -->
-  <title>{renderedTitle}</title>
-  <meta name="title" content={renderedTitle} />
-  {description && <meta name="description" content={description} />}
+    <script is:inline type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-27X11PSQ9J");
+    </script>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={Astro.url} />
-  <meta property="og:title" content={title} />
-  {description && <meta property="og:description" content={description} />}
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={Astro.url} />
-  <meta property="twitter:title" content={title} />
-  {description && <meta property="twitter:description" content={description} />}
-
-
-  <!-- Google Analytics -->
-  <script
-    type="text/partytown"
-    src="https://www.googletagmanager.com/gtag/js?id=G-27X11PSQ9J"
-  ></script>
-
-  <script type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-27X11PSQ9J");
-  </script>
-
-  <PostHog />
+    <PostHog />
+  </head>
 
   <body>
     <div class="container">
@@ -86,7 +96,7 @@ const renderedTitle = title ? `${title} - ${SITE_TITLE}` : SITE_TITLE;
               ></path></svg
             >
           </a>
-          <a href="/rss.xml">
+          <a href="/feed.xml">
 <svg viewBox="0 0 24 24" data-astro-cid-5hce7sga="" astro-icon="mdi:rss"><path fill="currentColor" d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20 5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"></path></svg>
           </a>
         </div>

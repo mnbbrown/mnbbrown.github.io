@@ -7,6 +7,33 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, publishedDate, description } = Astro.props;
+
+// Format date for structured data
+const isoDate = publishedDate.toISOString();
+
+// Create JSON-LD for BlogPosting schema
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "datePublished": isoDate,
+  "dateModified": isoDate,
+  "description": description || "",
+  "author": {
+    "@type": "Person",
+    "name": "Matthew Brown",
+    "url": "https://matthewbrown.io"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Matthew Brown",
+    "url": "https://matthewbrown.io"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href
+  }
+};
 ---
 
 <Base title={title} description={description}>
@@ -19,6 +46,9 @@ const { title, publishedDate, description } = Astro.props;
       <slot />
     </div>
   </article>
+
+  <!-- Add structured data -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 </Base>
 
 <style is:global>
