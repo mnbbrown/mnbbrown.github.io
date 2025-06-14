@@ -92,9 +92,28 @@ const jsonLd = {
     margin-bottom: 0;
   }
 
+  /* Default image styling */
   img {
+    padding: 1rem 0;
+    height: auto;
+  }
+
+  /* Landscape images - use full bleed effect */
+  img.landscape {
     width: 120%;
     margin-left: -10% !important;
-    padding: 1rem 0;
+    max-width: 120%;
   }
+  
+  /* Portrait images - crop to square and fill width */
+  img.portrait {
+    width: 120%;
+    margin-left: -10% !important;
+    max-width: 120%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+
 </style>

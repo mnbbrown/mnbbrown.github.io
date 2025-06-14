@@ -12,4 +12,9 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const images = defineCollection({
+	type: 'data',
+	schema: z.object({}),
+});
+
+export const collections = { blog, images };
