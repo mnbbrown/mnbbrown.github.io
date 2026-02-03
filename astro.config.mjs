@@ -10,8 +10,7 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      // Exclude resume page from sitemap
-      filter: (page) => !page.includes("/resume/"),
+      filter: (page) => !page.includes("/resume"),
     }),
     // https://www.kevinzunigacuellar.com/blog/google-analytics-in-astro/
     partytown({
